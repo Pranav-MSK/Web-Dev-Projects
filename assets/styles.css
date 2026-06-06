@@ -321,6 +321,33 @@ main {
   border: 0; outline: 0; background: transparent;
   font: inherit; color: var(--ink); width: 100%;
 }
+.shuffle-btn {
+  padding: 9px 18px;
+  flex: 0 1 auto;
+}
+.shuffle-btn svg {
+  display: block;
+}
+.card--highlight {
+  animation: card-flash 2.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes card-flash {
+  0% {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(184, 106, 43, 0.4), var(--shadow);
+    transform: translateY(-4px);
+  }
+  50% {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 6px rgba(184, 106, 43, 0.6), var(--shadow);
+    transform: translateY(-4px);
+  }
+  100% {
+    border-color: var(--line);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(0);
+  }
 .sort-select-wrapper {
   position: relative;
   display: inline-flex;
